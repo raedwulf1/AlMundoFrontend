@@ -9,12 +9,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SharedModule } from './shared/shared.module';
 import { HttpModule } from '@angular/http';
 import { HotelService } from './services/hotels.service';
+import { HeaderComponent } from './layouts/header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,12 @@
+/**
+ * @author Raul Perez
+ * @description The main application run on dashboard
+ */
+
 import { Component, OnInit } from '@angular/core';
 import { HotelService } from '../services/hotels.service';
 import { Hotel } from '../models/hotel';
-import { environment } from '../../environments/environment.prod';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -32,7 +37,8 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  unCheckAll(){
+  /* Method to uncheck all the checkers */
+  unCheckAll() {
     this.check1 = false;
     this.check2 = false;
     this.check3 = false;
@@ -40,12 +46,13 @@ export class DashboardComponent implements OnInit {
     this.check5 = false;
     this.searchHotels();
   }
-
+/* Method to uncheck the Check of all stars */
   checked() {
     this.checkAll = false;
     setTimeout(() => this.searchHotels(), 10);
   }
 
+/* Method to search hotels by name or by stars */
   searchHotels() {
     let starSearch = '';
     let search = '';
@@ -75,14 +82,16 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+/* Method to find images url */
   lookImage(image: string): string {
     return this.imagesUrl + image;
   }
-
+/* Method to find icons url */
   lookIcon(icon: string): string {
     return '../../assets/icons/amenities/' + icon + '.svg';
   }
 
+  /* Method to show the correct qty of stars to show */
   totalStars(stars: number): number[] {
     switch (stars) {
       case 1:
