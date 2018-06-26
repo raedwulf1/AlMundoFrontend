@@ -9,7 +9,7 @@
 
 // Define the default theme (same as the example above).
 $app-accent: mat-palette($mat-orange);
-$app-primary:  mat-palette($mat-indigo);
+$app-primary:  mat-palette($mat-indigo, 900);
 $app-warn:  mat-palette($mat-red);
 $app-theme:   mat-light-theme($app-primary, $app-accent, $app-warn);
 
@@ -30,7 +30,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   @include angular-material-theme($dark-theme);
 }
 
-
+/* Customs SCSS */
 
 .pa-1{
   padding: 0 15px;
@@ -61,7 +61,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 }
 
 .ma-1{
-  margin: 10px;
+  margin: 0 10px 10px 0;
 }
 
 .h-100{
@@ -110,6 +110,11 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   height: 200px;
 }
 
+.details{
+  width: 90%;
+  margin-top: 15px;
+}
+
 .media-grid {
   text-align: center;
   overflow: hidden;
@@ -129,7 +134,29 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   transform: rotate(90deg);
 }
 
+.hotel-list{
+  margin-top: 50px;
+}
+
+.fixed-l{
+  position: fixed !important;
+  z-index: 1;
+  margin-top: 90px;
+  height: 135px;
+}
+
+.text-opac{
+  opacity: 0.6;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
 @media only screen and (max-width: 600px) {
+  .hotel-list{
+    margin-top: 75px;
+  }
+
   .bg-cover {
       background-size: cover;
       background-repeat: no-repeat;
@@ -137,9 +164,11 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
       width: auto;
       height: 250px;
   }
+  
   .fix-input {
       width: auto;
   }
+  
   .divition {
     width: 100%;
     border-top: dashed 1px;
@@ -147,13 +176,25 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
     margin: 20px 0;
     transform: rotate(0deg);
   }
+  
   .center-pad{
     padding: 0px 40% !important;
   }
+  
+  .details {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .title{
+    margin-top: 10px;
+  }
+  
+  .fixed{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 50px;
+    max-height: 50px !important;
+  }
 }
-
-.text-opac{
-  opacity: 0.6;
-}
-
-

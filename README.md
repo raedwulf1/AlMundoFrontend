@@ -4,6 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # English
 To Run the project:
+First execute the command npm install on the root of this project
 To watch all the content is required to start the backend first following the next link
 
 https://github.com/raedwulf1/AlMundoBackend
@@ -14,6 +15,7 @@ note: be sure that the api end-point where the backend is running, is the same t
 
 # Español
 Para iniciar el proyecto:
+Primero Ejecutar el comando npm install en la raiz del proyecto.
 para poder visualizar todo el contenido del proyecto es necesario iniciar el backend primero, el cual se puede conseguir en el siguiente enlace:
 
 https://github.com/raedwulf1/AlMundoBackend
